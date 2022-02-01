@@ -1,0 +1,1 @@
+//Erstelle eine js-Datei die den script-tag in main.html erstetzt
