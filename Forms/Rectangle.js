@@ -10,6 +10,14 @@ class Rectangle extends Form{
             g.fillRect(this.x,this.y,this.width,this.height);
         }
     }
+    stroke = () => {
+        if(this.visible){
+            g.strokeStyle = this.color;
+            g.strokeRect(this.x,this.y,this.width,this.height);
+            
+        }
+    }
+    getAverage = () => {this.width * this.height;}
 
 }
 
