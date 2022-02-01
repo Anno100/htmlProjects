@@ -1,3 +1,8 @@
+/**
+ * @class Form
+ * 
+ * @constructor (number)x, (number)y, (string)color
+ */
 class Form{
     constructor(x = 0, y = 0, color = "black") {
 
