@@ -7,6 +7,7 @@ c.width = window.innerWidth;
 c.height = window.innerHeight;
 
 var g = c.getContext("2d");
-g.fillRect(0,0,10,10);
 
-var R = new Rectangle();
+var R = new Rectangle(10,10,10,10,"red");
+
+R.fill();

@@ -1,28 +1,21 @@
-class Form{
-    constructor(x = 0, y = 0, color = "black"){
+class Form {
+    constructor(x = 0, y = 0, color = "black") {
         this.x = x;
         this.y = y;
         this.color = color;
         this.visible = true;
-        
-        try {
-            c;
-        } catch (err) {
+
+        try { c } 
+        catch (err) {
             console.error(err +
                 "\nCanvas Objekt wurde nie initialisiert." +
 
                 "\n\nFügen sie am Anfang des Codes folgendes hinzu:" +
-                "\nvar c = document.getElementById(\"myCanvas\")" +
+                "\nvar c = document.getElementById(\"myCanvas\")" + 
 
-                "\n\nFalls diese Meldung immernoch angezeigt wird fügen sie im body-Tag ein Canvas-Tag mit der id \"myCanvas\" hinzu!!!"
-
-            );
-
-        }
-
-        try {
-            g;
-        } catch (err) {
+                "\n\nFalls diese Meldung immernoch angezeigt wird fügen sie im body-Tag ein Canvas-Tag mit der id \"myCanvas\" hinzu!!!");
+        }try { g } 
+        catch (err) {
             console.error(err +
                 "\nGraphics Objekt wurde nie initialisiert." +
 
@@ -30,9 +23,20 @@ class Form{
                 "\nvar g = c.getContext(\"2d\")");
 
         }
+        
     }
-    
-    setVisability = (visable) => {
-        this.visable = visable;
-    }
+
+    getX = () => this.x;
+    setX = (x) => { this.x = x; }
+
+    getY = () => this.y;
+    setY = (y) => { this.y = y; }
+
+    getColor = () => this.color;
+    setColor = (color) => { this.color = color; }
+
+    getVisable = () => this.visible;
+    setVisable = (visible) => { this.visible = visible; }
+
+
 }
