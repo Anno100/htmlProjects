@@ -8,6 +8,6 @@ c.height = window.innerHeight;
 
 var g = c.getContext("2d");
 
-var R = new Rectangle(10,10,10,"orange");
+var R = new Rectangle(10,10,100,100,Color.RGB(255,0,0,0.5));
 
 R.fill();

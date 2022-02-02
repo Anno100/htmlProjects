@@ -10,11 +10,11 @@ class Rectangle extends Form {
      * @param {number} y 
      * @param {number} width 
      * @param {number} height 
-     * @param {string} color 
+     * @param {Color} color 
      * @param {boolean} visible
      * 
      */
-    constructor(x = 0, y = 0, width = 10, height = 20, color = "black", visible = true) {
+    constructor(x = 0, y = 0, width = 10, height = 20, color = Color.Black, visible = true) {
         super(x, y, color, visible);
         this.width = width;
         this.height = height;

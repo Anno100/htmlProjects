@@ -2,16 +2,15 @@
  * @class 
  */
 class Form{
-
     /**
      * 
      * @param {number} x Set x-coordinate 
      * @param {number} y Set y-coordinate
-     * @param {string} color Set Color
+     * @param {Color} color Set Color
      * @param {boolean} visible Set Visability with setVisability()
      * 
      */
-    constructor(x = 0, y = 0, color = "black", visible = true) {
+    constructor(x = 0, y = 0, color = Color.Black, visible = true) {
 
         this.x = x;
         this.y = y;
