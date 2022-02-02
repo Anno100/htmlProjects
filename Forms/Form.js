@@ -1,15 +1,23 @@
 /**
- * @class Form
- * 
- * @constructor (number)x, (number)y, (string)color
+ * @class 
  */
 class Form{
-    constructor(x = 0, y = 0, color = "black") {
+
+    /**
+     * 
+     * @param {number} x Set x-coordinate 
+     * @param {number} y Set y-coordinate
+     * @param {string} color Set Color
+     * @param {boolean} visible Set Visability with setVisability()
+     * 
+     */
+    constructor(x = 0, y = 0, color = "black", visible = true) {
 
         this.x = x;
         this.y = y;
         this.color = color;
-        this.visible = true;
+
+        this.visible = visible;
 
         Form.try_catch();
 
@@ -27,6 +35,11 @@ class Form{
     getVisable = () => this.visible;
     setVisable = (visible) => { this.visible = visible; }
 
+    /**
+     * @static
+     * @public
+     * @method
+     */
     static try_catch = () =>{
         try { c } 
         catch (err) {
@@ -47,5 +60,6 @@ class Form{
 
         }
     }
+
 
 }

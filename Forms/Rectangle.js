@@ -1,32 +1,66 @@
-
 /**
-@class Rectangle
-@constructor (double)x, (double)y, (double)width, (double)height, (String)color
+ * @class
+ * Create a new Rectangle
+ * @extends Form
  */
-class Rectangle extends Form{
-    constructor(x = 0, y = 0, width = 10, height = 20, color = "black") {
-        super(x,y,color);
+class Rectangle extends Form {
+    /**
+     * 
+     * @param {number} x 
+     * @param {number} y 
+     * @param {number} width 
+     * @param {number} height 
+     * @param {string} color 
+     * @param {boolean} visible
+     * 
+     */
+    constructor(x = 0, y = 0, width = 10, height = 20, color = "black", visible = true) {
+        super(x, y, color, visible);
         this.width = width;
         this.height = height;
     }
 
+
+    getWidth = () => this.width;
+    getHeight = () => this.height;
+
+    setWidth = (width) => {this.width = width};
+    setHeight = (height) => {this.height = height};
+
     /**
-     * @description Füllt ein Rechteck im Canvas
+     * @method
+     * @returns {number}
      */
+    getAverage = () => this.width * this.height;
+
+    /**
+     * @method
+     * @returns {number}
+     */
+    getScope = () => 2*(this.width + this.height);
+
+    /**
+     * @method 
+     * @public
+     * */
     fill = () => {
-        if(this.visible){
+        if (this.visible) {
             g.fillStyle = this.color;
-            g.fillRect(this.x,this.y,this.width,this.height);
+            g.fillRect(this.x, this.y, this.width, this.height);
         }
     }
+    /**
+     * @method
+     * @public
+     */
     stroke = () => {
-        if(this.visible){
+        if (this.visible) {
             g.strokeStyle = this.color;
-            g.strokeRect(this.x,this.y,this.width,this.height);
-            
+            g.strokeRect(this.x, this.y, this.width, this.height);
+
         }
     }
-    getAverage = () => {this.width * this.height;}
+
 
 }
 
