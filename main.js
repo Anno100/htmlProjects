@@ -33,11 +33,14 @@ p.run = true;
 
 
 Timer = () =>{
+    p.setPixelLength(30);
+    p.x = 100;
+    p.y = 100;
 }
 
 GUI = () =>{
     g.clearRect(0,0,c.width,c.height);
-    p.draw(100,100,10);
+    p.draw();
 }
 
 setInterval(()=>{
