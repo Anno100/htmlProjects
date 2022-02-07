@@ -60,5 +60,7 @@ class Form{
         }
     }
 
+    static Rectangle = "Rectangle";
+    static Square = "Square";
 
 }
