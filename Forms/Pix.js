@@ -56,6 +56,7 @@ class PixSet{
         this.pixArray = pixArray;
         this.x = 0;
         this.y = 0;
+        this.pixLength = 10;
         this.currentPix = 0;
         this.run = false;
 
@@ -65,11 +66,19 @@ class PixSet{
         
     }
 
+    setSpeed = (speed) =>{
+        this.maxCounter = speed;
+        this.speed = speed;
+    }
+    setPixelLength = (pixLength) => {
+        this.pixLength = pixLength;
+    }
 
 
-    draw = (x,y,length) =>{
-        this.pixArray[this.currentPix].pixLength = length;
-        this.pixArray[this.currentPix].draw(x,y);
+
+    draw = () =>{
+        this.pixArray[this.currentPix].pixLength = this.pixLength;
+        this.pixArray[this.currentPix].draw(this.x,this.y);
         if(this.run){
             this.speed--;
             if(this.speed == 0){
