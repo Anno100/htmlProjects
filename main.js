@@ -12,18 +12,21 @@ c.height = window.innerHeight;
 
 var g = c.getContext("2d");
 
-r1 = new Rectangle(10,10,100,100);
-r2 = new Rectangle(600,60,10,10);
+
+var p = new Pix([
+    
+    [0,1,0],
+    [0,2,0],
+    [0,3,0]
+
+],10);
+
 
 Timer = () =>{
-    r1.x += 0.1;
-    if(r1.overlap(r2)) alert("YAY");
 }
 
 GUI = () =>{
-    g.clearRect(0,0,c.width,c.height);
-    r1.fill();
-    r2.fill();
+    p.draw();
 }
 
 setInterval(()=>{
