@@ -20,7 +20,11 @@ class Pix{
         this.colorSettings = newColorSettings;
     }
     
-    draw = () => {
+    draw = (X = undefined, Y = undefined) => {
+        if(Y != undefined && Y != undefined){
+            this.x = X;
+            this.y = Y;
+        }
         let x = 0;
         let y = 0;
         this.pixMatrix.forEach(pixArray => {
