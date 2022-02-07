@@ -40,6 +40,17 @@ class Rectangle extends Form {
     getScope = () => 2*(this.width + this.height);
 
     /**
+     * 
+     * @param {Form} other 
+     */
+    overlap = (other) =>{
+        if(other.constructor.name == Form.Rectangle || other.constructor.name == Form.Square){
+            if(this.x + this.width >= other.x && other.x + other.width >= this.x && this.y + this.height >= other.y && other.y + other.height >= this.y) return true;
+        }
+        return false;
+    }
+
+    /**
      * @method 
      * @public
      * */
@@ -63,4 +74,3 @@ class Rectangle extends Form {
 
 
 }
-
