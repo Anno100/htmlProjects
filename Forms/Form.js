@@ -62,5 +62,6 @@ class Form{
 
     static Rectangle = "Rectangle";
     static Square = "Square";
+    static Pix = "Pix";
 
 }
